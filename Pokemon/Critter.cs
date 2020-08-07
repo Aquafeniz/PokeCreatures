@@ -29,13 +29,6 @@ namespace Pokemon
         public float HP;
         public bool isDefeated = false;
 
-        //void Test()
-        //{
-        //    moveSet.Add(new SupportSkill("Boost de ataque", affinity, ESupportSkill.AtkUp));
-        //    moveSet.Add(new AttackSkill("Ataque", affinity, 50f));
-        //    //moveSet[0].UseSkill();
-        //}
-
         public Critter(string _name, float _baseAtk, float _baseDef, float _baseSpd, EAffinity _affinity, float _hp, List<Skill> _skills)
         {
             Name = _name;
@@ -87,14 +80,6 @@ namespace Pokemon
         {
         }
 
-        //void Attack(Skill sk, Critter target)
-        //{
-        //    if (moveSet.Contains(sk as AttackSkill))
-        //    {
-        //        sk.UseSkill(target);
-        //    }
-        //}
-
         public void TakeDamage(float damage)
         {
             HP -= damage;
@@ -105,7 +90,5 @@ namespace Pokemon
                 isDefeated = true;
             }
         }
-
-
     }
 }

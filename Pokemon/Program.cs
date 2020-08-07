@@ -10,11 +10,8 @@ namespace Pokemon
     {
         static void Main(string[] args)
         {
-
             List<Critter> battleGroup1 = new List<Critter>();
             List<Critter> battleGroup2 = new List<Critter>();
-
-
 
             //Creación de MoveSets
             List<Skill> moveSet1 = new List<Skill>(); //Ataque debil, buff de ataque, buff defensa | Fuego
@@ -62,16 +59,6 @@ namespace Pokemon
                 battleGroup2.Add(new Critter("Waterin", 130f, 150f, 37f, EAffinity.Dark, 200, moveSet3));
                 new Critter("Restrepin", 0f, 0f, 0f, EAffinity.Earth, 25, moveSet1);
             }
-
-
-
-
-
-
-
-
-
-
         }
     }
 }
