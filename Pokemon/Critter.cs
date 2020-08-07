@@ -13,7 +13,7 @@ namespace Pokemon
         public EAffinity affinity;
         public string Name { get; protected set; }
         public float BaseAttack { get; }
-        public float SkillPower { get; set; }
+        public float RealAttack { get; set; }
         public float AffinityMultiplier { get; }
         public float BaseDefense { get; }
         public float DefenseValue { get; set; }
@@ -43,6 +43,7 @@ namespace Pokemon
                 BaseAttack = 10;
                 Console.WriteLine("'{0}' no puede tener ataque menor a 10, por lo tanto el ataque será 10.", _name);
             }
+            RealAttack = BaseAttack;
             BaseDefense = _baseDef;
             if (BaseDefense > 100) 
             {
@@ -90,5 +91,7 @@ namespace Pokemon
                 isDefeated = true;
             }
         }
+
+
     }
 }

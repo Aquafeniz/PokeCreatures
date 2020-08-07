@@ -29,7 +29,7 @@ namespace Pokemon
         public override void UseSkill(Critter target)
         {
             AffinityCalculator(target);
-            DamageValue = (myCritter.BaseAttack + myCritter.SkillPower) * multiplier;
+            DamageValue = (myCritter.RealAttack + Power) * multiplier;
             target.TakeDamage(DamageValue);
         }
 

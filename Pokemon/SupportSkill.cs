@@ -24,9 +24,10 @@ namespace Pokemon
         {
             if (supportSkill == ESupportSkill.AtkUp && myCritter.atkUpSkill < 3)
             {
-                myCritter.SkillPower += (myCritter.BaseAttack * 20) / 100;
+                float modifier = (myCritter.BaseAttack * 20) / 100;
+                myCritter.RealAttack += modifier;
                 myCritter.atkUpSkill++;
-                Console.WriteLine("El ataque de {0} aumentó en {1}. (Base :{2})", myCritter.Name, myCritter.SkillPower, myCritter.BaseAttack);
+                Console.WriteLine("El ataque de {0} aumentó en {1}. (Base: {2})", myCritter.Name, modifier, myCritter.BaseAttack);
 
             }
             else if (supportSkill == ESupportSkill.DefUp && myCritter.defUpSkill < 3)
@@ -34,14 +35,14 @@ namespace Pokemon
                 myCritter.DefenseValue += (myCritter.BaseDefense * 20) / 100;
                 myCritter.defUpSkill++;
                 myCritter.RealDefense = myCritter.BaseDefense + myCritter.DefenseValue;
-                Console.WriteLine("La defensa de {0} aumentó en {1}, y ahora su defensa total es {2}. (Base :{3})", myCritter.Name, myCritter.DefenseValue, myCritter.RealDefense, myCritter.BaseDefense);
+                Console.WriteLine("La defensa de {0} aumentó en {1}, y ahora su defensa total es {2}. (Base: {3})", myCritter.Name, myCritter.DefenseValue, myCritter.RealDefense, myCritter.BaseDefense);
             }
             else if (supportSkill == ESupportSkill.SpdDown && target.spdDownSkill < 3)
             {
                 target.SpeedValue += (target.BaseSpeed * 30) / 100;
                 target.spdDownSkill++;
                 target.RealSpeed = target.BaseSpeed - target.SpeedValue;
-                Console.WriteLine("La velocidad de {0} se redujo en {1}, y ahora su velocidad total es {2}. (Base :{3})", target.Name, target.SpeedValue, target.RealSpeed, target.BaseSpeed);
+                Console.WriteLine("La velocidad de {0} se redujo en {1}, y ahora su velocidad total es {2}. (Base: {3})", target.Name, target.SpeedValue, target.RealSpeed, target.BaseSpeed);
             }
             else
             {

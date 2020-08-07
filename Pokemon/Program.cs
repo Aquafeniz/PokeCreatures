@@ -10,6 +10,7 @@ namespace Pokemon
     {
         static void Main(string[] args)
         {
+
             List<Critter> battleGroup1 = new List<Critter>();
             List<Critter> battleGroup2 = new List<Critter>();
 
