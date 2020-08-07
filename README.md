@@ -30,4 +30,4 @@ Se añadio la clase critter con sus propias verificaciones de rango ademas de la
 se creo la clase player para referencial al jugador que era el que tenia las criaturas 
 
 - Principal - Program - MAIN
-Se realizo la creacion de las skills asignadolas de un grupo de skills (MoveSet) ademas de invocar las llamadas
+Se realizo la creacion de las skills asignadolas de un grupo de skills (MoveSet) ademas de invocar las llamadas.
